@@ -2,55 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://Determine111.github.io/hugo-dev/en/categories/</loc>
+    <loc>http://localhost:1313/hugo-dev/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://Determine111.github.io/hugo-dev/categories/"
+                href="http://localhost:1313/hugo-dev/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://Determine111.github.io/hugo-dev/ar/categories/"
+                href="http://localhost:1313/hugo-dev/ar/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://Determine111.github.io/hugo-dev/en/categories/"
+                href="http://localhost:1313/hugo-dev/en/categories/"
                 />
   </url><url>
-    <loc>https://Determine111.github.io/hugo-dev/en/</loc>
+    <loc>http://localhost:1313/hugo-dev/en/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://Determine111.github.io/hugo-dev/"
+                href="http://localhost:1313/hugo-dev/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://Determine111.github.io/hugo-dev/ar/"
+                href="http://localhost:1313/hugo-dev/ar/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://Determine111.github.io/hugo-dev/en/"
+                href="http://localhost:1313/hugo-dev/en/"
                 />
   </url><url>
-    <loc>https://Determine111.github.io/hugo-dev/en/tags/</loc>
+    <loc>http://localhost:1313/hugo-dev/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://Determine111.github.io/hugo-dev/tags/"
+                href="http://localhost:1313/hugo-dev/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ar"
-                href="https://Determine111.github.io/hugo-dev/ar/tags/"
+                href="http://localhost:1313/hugo-dev/ar/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://Determine111.github.io/hugo-dev/en/tags/"
+                href="http://localhost:1313/hugo-dev/en/tags/"
                 />
   </url>
 </urlset>
