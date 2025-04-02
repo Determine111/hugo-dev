@@ -215,6 +215,47 @@
 &lt;/div&gt;
 &lt;/div&gt;</description>
         </item>
+        <item>
+        <title>进程监控Process Exporter</title>
+        <link>https://determine111.github.io/hugo-dev/p/%E7%9B%91%E6%8E%A7%E8%BF%9B%E7%A8%8B%E7%8A%B6%E6%80%81/</link>
+        <pubDate>Tue, 01 Apr 2025 16:00:36 +0800</pubDate>
+        
+        <guid>https://determine111.github.io/hugo-dev/p/%E7%9B%91%E6%8E%A7%E8%BF%9B%E7%A8%8B%E7%8A%B6%E6%80%81/</guid>
+        <description>&lt;h3 id=&#34;基础配置&#34;&gt;基础配置
+&lt;/h3&gt;&lt;p&gt;官方地址：&lt;a class=&#34;link&#34; href=&#34;https://github.com/ncabatoff/process-exporter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;参考文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;配置文件：&lt;/p&gt;
+&lt;p&gt;选择要监视的进程并将它的分组，提供命令行参数或者使用YAML配置文件。
+配置模板如下：
+&lt;code&gt;process_names:&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;matcher1&lt;/li&gt;
+&lt;li&gt;matcher2
+&amp;hellip;&lt;/li&gt;
+&lt;li&gt;matcherN
+例如：监控所有的服务进程
+process_names:&lt;/li&gt;
+&lt;li&gt;name: &amp;ldquo;{{.Comm}}&amp;rdquo;
+cmdline:
+&lt;ul&gt;
+&lt;li&gt;&amp;lsquo;.+&amp;rsquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;配置模板选项如下：&lt;/p&gt;
+&lt;p&gt;{{.Comm}} 包含原始可执行文件的basename，/proc//stat 中的换句话说，2nd 字段&lt;/p&gt;
+&lt;p&gt;{{.ExeBase}} 包含可执行文件的basename&lt;/p&gt;
+&lt;p&gt;{{.ExeFull}} 包含可执行文件的完全限定路径&lt;/p&gt;
+&lt;p&gt;{{.Username}} 包含有效用户的用户名&lt;/p&gt;
+&lt;p&gt;{{.Matches}} 映射包含应用命令行tlb所产生的所有匹配项&lt;/p&gt;
+&lt;p&gt;process_names中的每个项目都必须包含一个或多个选择器(comm，exe或cmdline), 如果存在多个选择器，则它们必须全部匹配。
+每个选择器都是一个字符串列表，用于与进程的comm，argv [0]匹配；对于cmdline，则是一个适用于命令行的正则表达式。 cmdline
+regexp使用Go语法。&lt;/p&gt;
+&lt;p&gt;对于comm和exe，字符串列表是一个OR，这意味着与任何字符串匹配的任何进程都将添加到该项目的组中。&lt;/p&gt;
+&lt;p&gt;对于cmdline，正则表达式列表为AND，表示它们都必须匹配。 正则表达式中的任何捕获组都必须使用？P &lt;name&gt;
+选项为捕获分配一个名称，该名称用于填充.Matches。`&lt;/p&gt;
+</description>
+        </item>
         
     </channel>
 </rss>
