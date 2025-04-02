@@ -478,6 +478,7 @@
 </span><span class="lnt">94
 </span><span class="lnt">95
 </span><span class="lnt">96
+</span><span class="lnt">97
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">    <span class="kn">package</span> <span class="nx">main</span>
@@ -495,7 +496,8 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="c1">// 初始化 Collector，开启异步模式并限制并发</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">c</span> <span class="o">:=</span> <span class="nx">colly</span><span class="p">.</span><span class="nf">NewCollector</span><span class="p">(</span>
-</span></span><span class="line"><span class="cl">		<span class="nx">colly</span><span class="p">.</span><span class="nf">UserAgent</span><span class="p">(</span><span class="s">&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">colly</span><span class="p">.</span><span class="nf">UserAgent</span><span class="p">(</span><span class="s">&#34;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
+</span></span></span><span class="line"><span class="cl"><span class="s">		 Chrome/91.0.4472.124 Safari/537.36&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">		<span class="nx">colly</span><span class="p">.</span><span class="nf">Async</span><span class="p">(</span><span class="kc">true</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">	<span class="p">)</span>
 </span></span><span class="line"><span class="cl">
