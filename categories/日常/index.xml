@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>日常 on Determine</title>
+        <link>https://determine111.github.io/hugo-dev/categories/%E6%97%A5%E5%B8%B8/</link>
+        <description>Recent content in 日常 on Determine</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Tue, 08 Apr 2025 14:19:12 +0800</lastBuildDate><atom:link href="https://determine111.github.io/hugo-dev/categories/%E6%97%A5%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Daily Work</title>
+        <link>https://determine111.github.io/hugo-dev/p/%E6%97%A5%E5%B8%B8%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</link>
+        <pubDate>Tue, 08 Apr 2025 14:19:12 +0800</pubDate>
+        
+        <guid>https://determine111.github.io/hugo-dev/p/%E6%97%A5%E5%B8%B8%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</guid>
+        <description>&lt;img src="https://determine111.github.io/hugo-dev/helena-hertz-wWZzXlDpMog-unsplash.jpg" alt="Featured image of post Daily Work" /&gt;&lt;h1 id=&#34;2025&#34;&gt;2025
+&lt;/h1&gt;&lt;h2 id=&#34;-04-07&#34;&gt;📅 04-07
+&lt;/h2&gt;&lt;h3 id=&#34;-今日完成&#34;&gt;✅ 今日完成
+&lt;/h3&gt;&lt;h4 id=&#34;1-核心任务&#34;&gt;1. 核心任务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分snmp设备和HTTP站点拨测接入  ■■■□□ 60%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SOC例会 ■■■■■ 100%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分soc业务系统基线、漏洞清单汇总和通知 ■■■■■ 100%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-临时任务&#34;&gt;2. 临时任务
+&lt;/h4&gt;&lt;h3 id=&#34;-今日问题&#34;&gt;⚠️ 今日问题
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分主机9100、DCN网络联通问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-04-08&#34;&gt;📅 04-08
+&lt;/h2&gt;&lt;h3 id=&#34;-今日完成-1&#34;&gt;✅ 今日完成
+&lt;/h3&gt;&lt;h4 id=&#34;1-核心任务-1&#34;&gt;1. 核心任务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; snmp告警规则编写、部分snmp、http资源拨测接入 ■■■■□ 80%
+&lt;ul&gt;
+&lt;li&gt;成果：完成snmp设备离线告警规则编写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 研发例会 ■■■■■ 100%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 网络设备接入SNMP连通性测试 ■■■■□ 80%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-临时任务-1&#34;&gt;2. 临时任务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 协助测试钓鱼演练  ■■■■■ 100%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-今日问题-1&#34;&gt;⚠️ 今日问题
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; DCN网络联通问题&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 基线和漏洞修复情况不佳&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
