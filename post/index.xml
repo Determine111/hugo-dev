@@ -20,7 +20,7 @@
 &lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分snmp设备和HTTP站点拨测接入  ■■■□□ 60%&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SOC例会 ■■■■■ 100%&lt;/li&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分soc业务系统基线、漏洞清单汇总和通知 ■■■■■ 100%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分soc业务系统基线、漏洞清单汇总和邮件通知 ■■■■■ 100%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;2-临时任务&#34;&gt;2. 临时任务
 &lt;/h4&gt;&lt;h3 id=&#34;-今日问题&#34;&gt;⚠️ 今日问题
@@ -48,7 +48,7 @@
 &lt;h3 id=&#34;-今日问题-1&#34;&gt;⚠️ 今日问题
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; DCN网络联通问题&lt;/li&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 基线和漏洞修复情况不佳&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 基线和漏洞修复进度较慢&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 </description>
