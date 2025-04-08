@@ -13,7 +13,144 @@
         <pubDate>Tue, 08 Apr 2025 14:19:12 +0800</pubDate>
         
         <guid>https://determine111.github.io/hugo-dev/p/daily-work/</guid>
-        <description></description>
+        <description>&lt;h1 id=&#34;2025&#34;&gt;2025
+&lt;/h1&gt;&lt;h2 id=&#34;-04-07&#34;&gt;📅 04-07
+&lt;/h2&gt;&lt;h3 id=&#34;-今日完成&#34;&gt;✅ 今日完成
+&lt;/h3&gt;&lt;h4 id=&#34;1-核心任务&#34;&gt;1. 核心任务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分snmp设备和HTTP站点拨测接入  ■■■□□ 60%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SOC例会 ■■■■■ 100%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分soc业务系统基线、漏洞清单汇总和通知 ■■■■■ 100%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-临时任务&#34;&gt;2. 临时任务
+&lt;/h4&gt;&lt;h3 id=&#34;-今日问题&#34;&gt;⚠️ 今日问题
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分主机9100、DCN网络联通问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-04-08&#34;&gt;📅 04-08
+&lt;/h2&gt;&lt;h3 id=&#34;-今日完成-1&#34;&gt;✅ 今日完成
+&lt;/h3&gt;&lt;h4 id=&#34;1-核心任务-1&#34;&gt;1. 核心任务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; snmp告警规则编写、部分snmp、http资源拨测接入 ■■■■□ 80%
+&lt;ul&gt;
+&lt;li&gt;成果：完成snmp设备离线告警规则编写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 研发例会 ■■■■■ 100%
+&lt;ul&gt;
+&lt;li&gt;成果：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 网络设备接入SNMP连通性测试 ■■■■□ 80%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-临时任务-1&#34;&gt;2. 临时任务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 协助测试钓鱼演练  ■■■■■ 100%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-今日问题-1&#34;&gt;⚠️ 今日问题
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; DCN网络联通问题&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 基线和漏洞修复情况不佳&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-明日计划&#34;&gt;📌 明日计划
+&lt;/h3&gt;&lt;h3 id=&#34;1-重点任务&#34;&gt;1. 重点任务
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 任务名称
+&lt;ul&gt;
+&lt;li&gt;目标：完成XX功能联调&lt;/li&gt;
+&lt;li&gt;预估耗时：4h&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-待跟进事项&#34;&gt;2. 待跟进事项
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 跟进XX项目测试报告&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-数据看板&#34;&gt;📊 数据看板
+&lt;/h2&gt;</description>
+        </item>
+        <item>
+        <title>Daily Work</title>
+        <link>https://determine111.github.io/hugo-dev/p/daily-work/</link>
+        <pubDate>Tue, 08 Apr 2025 14:19:12 +0800</pubDate>
+        
+        <guid>https://determine111.github.io/hugo-dev/p/daily-work/</guid>
+        <description>&lt;h1 id=&#34;-日报---日期&#34;&gt;📅 日报 - {日期}
+&lt;/h1&gt;&lt;p&gt;​&lt;strong&gt;今日状态&lt;/strong&gt;​：🌞 晴 / 🌧️ 雨 / ⛅ 多云&lt;br&gt;
+​&lt;strong&gt;优先级&lt;/strong&gt;​：🔥 紧急 | ⚡ 重要 | 💡 常规&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-今日完成&#34;&gt;✅ 今日完成
+&lt;/h2&gt;&lt;h3 id=&#34;1-核心任务&#34;&gt;1. 核心任务
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 任务名称1
+&lt;ul&gt;
+&lt;li&gt;进度：■■■■□ 80%&lt;/li&gt;
+&lt;li&gt;成果：完成XX模块开发&lt;/li&gt;
+&lt;li&gt;耗时：3h&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 任务名称2
+&lt;ul&gt;
+&lt;li&gt;成果：修复XX漏洞&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-临时任务&#34;&gt;2. 临时任务
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 紧急处理XX客户需求&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-今日问题&#34;&gt;⚠️ 今日问题
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;问题描述&lt;/th&gt;
+          &lt;th&gt;解决方案&lt;/th&gt;
+          &lt;th&gt;负责人&lt;/th&gt;
+          &lt;th&gt;状态&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;XX服务响应延迟&lt;/td&gt;
+          &lt;td&gt;增加节点/优化查询&lt;/td&gt;
+          &lt;td&gt;张三&lt;/td&gt;
+          &lt;td&gt;🟡 跟进中&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;接口文档缺失&lt;/td&gt;
+          &lt;td&gt;补充Swagger文档&lt;/td&gt;
+          &lt;td&gt;李四&lt;/td&gt;
+          &lt;td&gt;✅ 已解决&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-明日计划&#34;&gt;📌 明日计划
+&lt;/h2&gt;&lt;h3 id=&#34;1-重点任务&#34;&gt;1. 重点任务
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 任务名称
+&lt;ul&gt;
+&lt;li&gt;目标：完成XX功能联调&lt;/li&gt;
+&lt;li&gt;预估耗时：4h&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-待跟进事项&#34;&gt;2. 待跟进事项
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 跟进XX项目测试报告&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-数据看板&#34;&gt;📊 数据看板
+&lt;/h2&gt;&lt;hr&gt;
+&lt;h2 id=&#34;-心得总结&#34;&gt;💡 心得总结
+&lt;/h2&gt;&lt;p&gt;✨ 今日最佳实践：采用XX方法提升编译效率&lt;br&gt;
+❗ 待改进点：需求评审需更细致&lt;/p&gt;
+</description>
         </item>
         <item>
         <title>Openssh Update</title>
