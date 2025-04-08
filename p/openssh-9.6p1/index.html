@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="CentOS7升级openssh-9.6p1">
+<title>Openssh Update</title>
+
+<link rel='canonical' href='https://determine111.github.io/hugo-dev/p/openssh-9.6p1/'>
+
+<link rel="stylesheet" href="/hugo-dev/scss/style.min.b9c8156d464c343bdacaf14a871581fb94cbbdb9dd5cbce4ba017361187cc930.css"><meta property='og:title' content="Openssh Update">
+<meta property='og:description' content="CentOS7升级openssh-9.6p1">
+<meta property='og:url' content='https://determine111.github.io/hugo-dev/p/openssh-9.6p1/'>
+<meta property='og:site_name' content='Determine'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2025-04-08T10:27:13&#43;08:00'/><meta property='article:modified_time' content='2025-04-08T10:27:13&#43;08:00'/>
+<meta name="twitter:title" content="Openssh Update">
+<meta name="twitter:description" content="CentOS7升级openssh-9.6p1">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/hugo-dev/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/hugo-dev/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/hugo-dev">Determine</a></h1>
+            <h2 class="site-description">Determine的博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/CaiJimmy/hugo-theme-stack'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/hugo-dev/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-dev/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-dev/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-dev/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo-dev/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://determine111.github.io/hugo-dev/en/" >English</option>
+                                
+                                    <option value="https://determine111.github.io/hugo-dev/" selected>中文</option>
+                                
+                                    <option value="https://determine111.github.io/hugo-dev/ar/" >عربي</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#"><strong><font style="color:rgb(0, 0, 0);">前置准备</font></strong></a></li>
+    <li><a href="#"><strong><font style="color:rgb(0, 0, 0);">安装</font></strong></a>
+      <ol>
+        <li><a href="#安装openssl111f依赖已安装111以上版本可跳过需要知晓openssldir目录"><font style="color:rgb(51, 51, 51);">安装OPenssl1.1.1f依赖（已安装1.1.1以上版本可跳过，需要知晓openssldir目录）</font></a></li>
+        <li><a href="#安装zlib131依赖已安装zlib可跳过需要知晓zlib安装目录"><font style="color:rgb(0, 0, 0);">安装zlib1.3.1依赖</font><font style="color:rgb(51, 51, 51);">（已安装zlib可跳过，需要知晓zlib安装目录）</font></a></li>
+        <li><a href="#安装openssh-96p1"><font style="color:rgb(0, 0, 0);">安装openssh-9.6p1</font></a></li>
+        <li><a href="#测试"><font style="color:rgb(0, 0, 0);">测试</font></a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/hugo-dev/categories/%E8%BF%90%E7%BB%B4/" >
+                运维
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/hugo-dev/p/openssh-9.6p1/">Openssh Update</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            CentOS7升级openssh-9.6p1
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 08, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 2 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <hr>
+<h1 id="centos7升级openssh-96p1"><font style="color:rgb(51, 51, 51);">CentOS7升级openssh-9.6p1</font>
+</h1><h2 id=""><strong><font style="color:rgb(0, 0, 0);">前置准备</font></strong>
+</h2><p><font style="color:rgb(250, 84, 28);background-color:rgb(242, 245, 249);">注意：稳妥起见，建议在升级前，安装xinetd和telnet服务，以保障在openssh升级期间服务器中断时，可以使用telnet登录服务器。</font></p>
+<p>延长超时断开时间（防止安装过程中较短时间不操作导致退出后，导致无法使用ssh登录）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vi /etc/profile
+</span></span><span class="line"><span class="cl"><span class="c1">#将最底下的TMOUT=300（5分钟） 延长至半小时以上</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TMOUT</span><span class="o">=</span><span class="m">1800</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#修改后执行保存并生效</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> /etc/profile
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#将TMOUT复原确保基线扫描正常</span>
+</span></span><span class="line"><span class="cl">vi /etc/profile
+</span></span><span class="line"><span class="cl"><span class="c1">#将最底下的TMOUT=300（5分钟） 延长至半小时以上</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TMOUT</span><span class="o">=</span><span class="m">1800</span>
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> /etc/profile
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><font style="color:rgb(250, 84, 28);background-color:rgb(242, 245, 249);"></font></p>
+<p>目前安装成功的服务器信息如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>jcm@BINSCACmwH ~<span class="o">]</span>$ ssh -V
+</span></span><span class="line"><span class="cl">OpenSSH_9.6p1, OpenSSL 1.1.1f  <span class="m">31</span> Mar <span class="m">2020</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>jcm@BINSCACmwH ~<span class="o">]</span>$ uname -a
+</span></span><span class="line"><span class="cl">Linux BINSCACmwH 4.19.90-2102.2.0.0062.ctl2.x86_64 <span class="c1">#1 SMP Thu Mar 10 03:34:36 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>jcm@BINSCACmwH ~<span class="o">]</span>$ cat /etc/redhat-release 
+</span></span><span class="line"><span class="cl">ctyunos release 2.0.1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#openssh-9.6p1需要 OpenSSL 在1.1.1以上 </span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>jcm@BINSCACmwH ~<span class="o">]</span>$ openssl version
+</span></span><span class="line"><span class="cl">OpenSSL 1.1.1f  <span class="m">31</span> Mar <span class="m">2020</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">其他依赖可以在编译过程中，根据报错进行通过 yum install 进行安装
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id=""><strong><font style="color:rgb(0, 0, 0);">安装</font></strong>
+</h2><h3 id="安装openssl111f依赖已安装111以上版本可跳过需要知晓openssldir目录"><font style="color:rgb(51, 51, 51);">安装OPenssl1.1.1f依赖（已安装1.1.1以上版本可跳过，需要知晓openssldir目录）</font>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#解压安装包，安装包放置路径（/usr/local）</span>
+</span></span><span class="line"><span class="cl">tar -zxf openssl-1.1.1f.tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#进入安装目录</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> openssl-1.1.1q
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#添加路径配置进行初始化</span>
+</span></span><span class="line"><span class="cl">./config -Wl,-rpath<span class="o">=</span>/usr/lib64 --prefix<span class="o">=</span>/usr/local/openssl --openssldir<span class="o">=</span>/usr/local/openssl --libdir<span class="o">=</span>/usr/lib64
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#执行安装</span>
+</span></span><span class="line"><span class="cl">make -j <span class="m">4</span> <span class="o">&amp;&amp;</span> make install
+</span></span><span class="line"><span class="cl"><span class="c1"># 备份旧openssl版本，创建软连接</span>
+</span></span><span class="line"><span class="cl">mv /usr/bin/openssl /usr/bin/openssl.bak
+</span></span><span class="line"><span class="cl">ln -s /usr/local/openssl/bin/openssl /usr/bin/openssl
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#验证新版本</span>
+</span></span><span class="line"><span class="cl">openssl version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="安装zlib131依赖已安装zlib可跳过需要知晓zlib安装目录"><font style="color:rgb(0, 0, 0);">安装zlib1.3.1依赖</font><font style="color:rgb(51, 51, 51);">（已安装zlib可跳过，需要知晓zlib安装目录）</font>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#解压安装包，安装包放置路径（/usr/local）</span>
+</span></span><span class="line"><span class="cl">tar xf zlib-1.3.1tar.gz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#进入安装目录下</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> zlib-1.3.1
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#添加prefix路径</span>
+</span></span><span class="line"><span class="cl">./configure --prefix<span class="o">=</span>/usr/local/zlib
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#编译执行安装 </span>
+</span></span><span class="line"><span class="cl">make
+</span></span><span class="line"><span class="cl">make check
+</span></span><span class="line"><span class="cl">make install
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#写入动态库的路径</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;/usr/local/zlib/lib/&#34;</span> &gt;&gt; /etc/ld.so.conf
+</span></span><span class="line"><span class="cl">ldconfig -v 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#查看软连接</span>
+</span></span><span class="line"><span class="cl">ll /lib64/libz.*
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#进入编译目录下</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /usr/local/zlib/lib/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#复制执行文件到/lib64目录下</span>
+</span></span><span class="line"><span class="cl">cp libz.so.1.3 /lib64/libz.so.1.3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#进入lib64目录下创建软连接</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> /lib64
+</span></span><span class="line"><span class="cl">ln -snf libz.so.1.3  /lib64/libz.so
+</span></span><span class="line"><span class="cl">ln -snf libz.so.1.3  /lib64/libz.so.1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="安装openssh-96p1"><font style="color:rgb(0, 0, 0);">安装openssh-9.6p1</font>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#备份openssh</span>
+</span></span><span class="line"><span class="cl">mkdir /etc/ssh/bak
+</span></span><span class="line"><span class="cl">cp /etc/ssh/ssh* /etc/ssh/bak <span class="o">&amp;&amp;</span> cp /etc/ssh/m* /etc/ssh/bak
+</span></span><span class="line"><span class="cl">cp /etc/pam.d/sshd ~
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#（谨慎操作）卸载openssh--(为防止突然断线-也可以不删除，直接装)</span>
+</span></span><span class="line"><span class="cl">rpm -e <span class="sb">`</span>rpm -qa <span class="p">|</span> grep openssh<span class="sb">`</span> --nodeps
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#进入/usr/local解压安装包</span>
+</span></span><span class="line"><span class="cl">tar -xzvf openssh-9.6p1.tar.gz
+</span></span><span class="line"><span class="cl"><span class="c1">#进入安装目录</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> openssh-9.6p1
+</span></span><span class="line"><span class="cl"><span class="c1">#初始化安装 --with-ssl-dir=实际安装目录 --with-zlib=时间安装目录</span>
+</span></span><span class="line"><span class="cl">./configure --prefix<span class="o">=</span>/usr/ --sysconfdir<span class="o">=</span>/etc/ssh --with-pam --with-md5-passwords --with-tcp-wrappers --with-ssl-dir<span class="o">=</span>/usr/local/openssl --with-zlib<span class="o">=</span>/usr/local/zlib --mandir<span class="o">=</span>/usr/share/man
+</span></span><span class="line"><span class="cl"><span class="c1"># !!!遇到编译失败问题,根据提示或者yum install 安装指定包进行操作，之后再一次执行 configure </span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#执行安装</span>
+</span></span><span class="line"><span class="cl">make <span class="o">&amp;&amp;</span> make install
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#授权</span>
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> /etc/ssh/ssh_host_rsa_key
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> /etc/ssh/ssh_host_ecdsa_key
+</span></span><span class="line"><span class="cl">chmod <span class="m">600</span> /etc/ssh/ssh_host_ed25519_key
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#配置</span>
+</span></span><span class="line"><span class="cl">cp -p contrib/redhat/sshd.init /etc/init.d/sshd
+</span></span><span class="line"><span class="cl">chmod +x /etc/init.d/sshd
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="s2">&#34;PermitRootLogin no&#34;</span> &gt;&gt; /etc/ssh/sshd_config <span class="c1">#确保基线扫描通过</span>
+</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;/UsePAM no/c\UsePAM yes&#39;</span> /etc/ssh/sshd_config
+</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;/^Subsystem/c\Subsystem sftp /usr/libexec/sftp-server&#39;</span> /etc/ssh/sshd_config
+</span></span><span class="line"><span class="cl">sed -i <span class="s1">&#39;/^SELINUX=enforcing/c\SELINUX=disabled&#39;</span> /etc/selinux/config
+</span></span><span class="line"><span class="cl">setenforce <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#查看版本</span>
+</span></span><span class="line"><span class="cl">sshd -v
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="测试"><font style="color:rgb(0, 0, 0);">测试</font>
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1">#设置sshd开机自启动</span>
+</span></span><span class="line"><span class="cl">chkconfig --add sshd
+</span></span><span class="line"><span class="cl">chkconfig sshd on
+</span></span><span class="line"><span class="cl">chkconfig --list sshd
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#重启服务</span>
+</span></span><span class="line"><span class="cl">mv  /usr/lib/systemd/system/sshd.service /usr/lib/systemd/system/sshd.service.bak
+</span></span><span class="line"><span class="cl">systemctl daemon-reload
+</span></span><span class="line"><span class="cl">systemctl restart sshd
+</span></span><span class="line"><span class="cl">systemctl status sshd
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <div class="disqus-container">
+    <div id="disqus_thread"></div>
+<script>
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+
+<style>
+    .disqus-container {
+        background-color: var(--card-background);
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l1);
+        padding: var(--card-padding);
+    }
+</style>
+
+<script>
+    window.addEventListener('onColorSchemeChange', (e) => {
+        if (typeof DISQUS == 'object') {
+            DISQUS.reset({
+                reload: true
+            });
+        }
+    })
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2020 - 
+        
+        2025 Example Person
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/hugo-dev/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
