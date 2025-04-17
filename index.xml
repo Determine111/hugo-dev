@@ -51,6 +51,39 @@
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 基线和漏洞修复进度较慢，需要催&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
+&lt;h2 id=&#34;-04-16&#34;&gt;📅 04-16
+&lt;/h2&gt;&lt;h3 id=&#34;-今日完成-2&#34;&gt;✅ 今日完成
+&lt;/h3&gt;&lt;h4 id=&#34;1-核心任务-2&#34;&gt;1. 核心任务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; web堡垒立项报告修改  ■■■□□ 50%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 防火墙配置文件比对脚本 ■■■□□ 80%
+&lt;ul&gt;
+&lt;li&gt;成果：完成防火墙配置文件比对结果HTML生成&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;-今日问题-2&#34;&gt;⚠️ 今日问题
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 需要补充web堡垒立项PPT中的项目目标、模块说明、外包需求等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-04-17&#34;&gt;📅 04-17
+&lt;/h2&gt;&lt;h3 id=&#34;-今日完成-3&#34;&gt;✅ 今日完成
+&lt;/h3&gt;&lt;h4 id=&#34;1-核心任务-3&#34;&gt;1. 核心任务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; web堡垒立项报告修改  ■■■■■ 100%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 防火墙配置文件比对脚本 ■■■■■ 100%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2-临时任务-2&#34;&gt;2. 临时任务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 协助测试钓鱼演练  ■■■■■ 100%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-今日问题-3&#34;&gt;⚠️ 今日问题
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分防火墙配置文件读取乱码，无法比对，暂时忽略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
 </description>
         </item>
         <item>
