@@ -18,7 +18,7 @@
 &lt;/h2&gt;&lt;h3 id=&#34;-今日完成&#34;&gt;✅ 今日完成
 &lt;/h3&gt;&lt;h4 id=&#34;1-核心任务&#34;&gt;1. 核心任务
 &lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分snmp设备和HTTP站点拨测接入  ■■■□□ 60%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分snmp设备和HTTP站点拨测接入 ■■■□□ 60%&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; SOC例会 ■■■■■ 100%&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分soc业务系统基线、漏洞清单汇总和邮件通知 ■■■■■ 100%&lt;/li&gt;
 &lt;/ul&gt;
@@ -42,7 +42,7 @@
 &lt;/ul&gt;
 &lt;h4 id=&#34;2-临时任务-1&#34;&gt;2. 临时任务
 &lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 协助测试钓鱼演练  ■■■■■ 100%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 协助测试钓鱼演练 ■■■■■ 100%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;-今日问题-1&#34;&gt;⚠️ 今日问题
@@ -55,7 +55,7 @@
 &lt;/h2&gt;&lt;h3 id=&#34;-今日完成-2&#34;&gt;✅ 今日完成
 &lt;/h3&gt;&lt;h4 id=&#34;1-核心任务-2&#34;&gt;1. 核心任务
 &lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; web堡垒立项报告修改  ■■■□□ 50%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; web堡垒立项报告修改 ■■■□□ 50%&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 防火墙配置文件比对脚本 ■■■□□ 80%
 &lt;ul&gt;
 &lt;li&gt;成果：完成防火墙配置文件比对结果HTML生成&lt;/li&gt;
@@ -71,17 +71,37 @@
 &lt;/h2&gt;&lt;h3 id=&#34;-今日完成-3&#34;&gt;✅ 今日完成
 &lt;/h3&gt;&lt;h4 id=&#34;1-核心任务-3&#34;&gt;1. 核心任务
 &lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; web堡垒立项报告修改  ■■■■■ 100%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; web堡垒立项报告修改 ■■■■■ 100%&lt;/li&gt;
 &lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 防火墙配置文件比对脚本 ■■■■■ 100%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;2-临时任务-2&#34;&gt;2. 临时任务
 &lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 协助测试钓鱼演练  ■■■■■ 100%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 协助测试钓鱼演练 ■■■■■ 100%&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;-今日问题-3&#34;&gt;⚠️ 今日问题
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分防火墙配置文件读取乱码，无法比对，暂时忽略.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;-04-18&#34;&gt;📅 04-18
+&lt;/h2&gt;&lt;h3 id=&#34;-今日完成-4&#34;&gt;✅ 今日完成
+&lt;/h3&gt;&lt;h4 id=&#34;1-核心任务-4&#34;&gt;1. 核心任务
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; web堡垒立项报告修改 ■■■□□ 50%&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 哨兵拨测资源检测脚本开发 ■□□□□ 20%
+&lt;ul&gt;
+&lt;li&gt;完成Go代码重写&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-今日问题web堡垒评审意见&#34;&gt;⚠️ 今日问题(web堡垒评审意见)
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 目标太泛了，要更具体，比如：5G网管等运维命令的精细控制、将Web类网管纳入堡垒管控体系等，每一个目标要有说明&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 项目方案：还是拆成两页，软件架构和堡垒示意图，文字说明关键技术点&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 背景里面，问题阐述不足：没有命令识别能力要写上去，投资压力大去掉（目前没有同类产品，所以不存在投资压力），加上Web网管安全防护差，漏洞直接暴露等问题&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 去找一些堡垒的介绍材料、白皮书等看看，可以写一些量化的指标、支持协议的说明等，要加上一些专业词汇&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 </description>
