@@ -81,7 +81,7 @@
 &lt;hr&gt;
 &lt;h3 id=&#34;-今日问题-3&#34;&gt;⚠️ 今日问题
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分防火墙配置文件读取乱码，无法比对，暂时忽略&lt;/li&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; 部分防火墙配置文件读取乱码，无法比对，暂时忽略.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 </description>
